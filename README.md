@@ -21,10 +21,12 @@ Execute.
 ```
 ./kali.sh
 ```
-Review cli and log filles and close unwanted open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP ).
+Review cli and log filles and make your changes according to your preferences.
+
 In this OS I did not cover the following steps:
-* Updateing SSH
 * Adding a non-root user.
+* Log management
+* Closeing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
 
 Problems might be caused by:
 * UFW Firewall rules for specific tools within the Kali Linux
