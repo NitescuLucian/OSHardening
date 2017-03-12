@@ -9,8 +9,9 @@ Navigate to the repository folder
 ```
 cd OSHardening
 ```
+Choose your OS from the following:
 
-# Kali Linux
+## Kali Linux
 Give execution permission to the fille.
 ```
 chmod +x ./kali.sh
