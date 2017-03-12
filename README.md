@@ -1,5 +1,4 @@
-
-*# OSHardening
+# OSHardening
 Multiple OS Hardening Scripts.
 
 Clone repository
