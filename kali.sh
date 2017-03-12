@@ -21,3 +21,7 @@ iptables -L -n -v > ./iptables_log.txt
 apt-get install rkhunter
 rkhunter --update
 rkhunter -c
+sudo apt-get install ufw
+sudo ufw allow ssh
+sudo ufw enable
+sudo ufw status verbose > ./ufw_log.txt
