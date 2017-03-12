@@ -1,3 +1,4 @@
+
 *# OSHardening
 Multiple OS Hardening Scripts.
 
@@ -24,5 +25,6 @@ Review cli and log filles and close unwanted open ports (iptables -A INPUT -p tc
 In this OS I did not cover the following steps:
 * Updateing SSH
 * Adding a non-root user.
+
 Problems might be caused by:
 * UFW Firewall rules for specific tools within the Kali Linux
