@@ -20,4 +20,4 @@ Execute.
 ```
 ./kali.sh
 ```
-Review log filles and close unwanted open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP ).
+Review cli and log filles and close unwanted open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP ).
