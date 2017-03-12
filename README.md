@@ -27,6 +27,7 @@ In this OS I did not cover the following steps:
 * Adding a non-root user.
 * Log management
 * Closeing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
+* Local encryption
 
 Problems might be caused by:
 * UFW Firewall rules for specific tools within the Kali Linux
