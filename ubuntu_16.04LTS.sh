@@ -56,7 +56,7 @@ echo "tmpfs     /run/shm     tmpfs     defaults,noexec,nosuid   �
 echo "${blue}Running chkrootkit. Wait! Log will be saved in ./chkrootkit_log.txt.${reset}"
 sudo chkrootkit > ./chkrootkit_log.txt
 echo "${blue}Running lynis. Wait! Log will be saved in ./lynis_log.txt.${reset}"
-lynis audit system > ./lynis_log.tx
+lynis audit system > ./lynis_log.txt
 echo "${blue}Running rkhunter. Wait!${reset}"
 rkhunter -c
 
