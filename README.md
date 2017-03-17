@@ -30,3 +30,23 @@ In this OS I did not cover the following steps:
 
 Problems might be caused by:
 * UFW Firewall rules for specific tools within the Kali Linux
+
+## Ubuntu 16.04 LTS
+Give execution permission to the fille.
+```
+chmod +x ./ubuntu_16.04LTS.sh
+```
+Execute.
+```
+./ubuntu_16.04LTS.sh
+```
+Review cli and log filles and make your changes according to your preferences.
+
+In this OS I did not cover the following steps:
+* Adding a non-root user.
+* Log management
+* Closeing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
+* Local encryption
+
+Problems might be caused by:
+* UFW Firewall rules for specific tools within the Kali Linux
