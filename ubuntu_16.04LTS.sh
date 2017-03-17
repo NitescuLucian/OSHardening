@@ -41,17 +41,27 @@ iptables -L -n -v > ./iptables_log.txt
 echo "${blue}Checking local firewall status. Log will be saved in ./ufw_log.txt${reset}"
 sudo ufw status verbose
 sudo ufw status verbose > ./ufw_log.txt
-echo "${yellow}Would you like to block all ports? (without SSH)) (y/n)${reset}" 
+echo "${yellow}Would you like to block all ports? (without SSH) (y/n)${reset}" 
 read foa
 if [ "$foa" = "y" ]; then
 sudo ufw allow ssh
 sudo ufw enable
 fi
 
+#Specific System Security
+echo "${yellow}Secureing shared memory, reboot will be needed.${reset}" 
+echo "tmpfs     /run/shm     tmpfs     defaults,noexec,nosuid     0     0" >> /etc/fstab
+
 #Aditional System Security Audit
 echo "${blue}Running chkrootkit. Wait! Log will be saved in ./chkrootkit_log.txt.${reset}"
 sudo chkrootkit > ./chkrootkit_log.txt
 echo "${blue}Running lynis. Wait! Log will be saved in ./lynis_log.txt.${reset}"
-lynis audit system > ./lynis_log.txt
+lynis audit system > ./lynis_log.tx
 echo "${blue}Running rkhunter. Wait!${reset}"
 rkhunter -c
+
+echo "${yellow}Would you like to reboot? (y/n)${reset}" 
+read fob
+if [ "$fob" = "y" ]; then
+sudo reboot
+fi
