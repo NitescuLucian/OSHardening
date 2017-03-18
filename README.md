@@ -40,7 +40,7 @@ chmod +x ./ubuntu_16.04LTS.sh
 ```
 Execute.
 ```
-./ubuntu_16.04LTS.sh
+sudo ./ubuntu_16.04LTS.sh
 ```
 Review cli and log filles and make your changes according to your preferences.
 
