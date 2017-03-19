@@ -52,6 +52,6 @@ fi
 echo "${blue}Running chkrootkit. Wait! Log will be saved in ./chkrootkit_log.txt.${reset}"
 sudo chkrootkit > ./chkrootkit_log.txt
 echo "${blue}Running lynis. Wait! Log will be saved in ./lynis_log.txt.${reset}"
-lynis audit system > ./lynis_log.txt
+lynis audit system -Q > ./lynis_log.txt
 echo "${blue}Running rkhunter. Wait!${reset}"
 rkhunter -c
