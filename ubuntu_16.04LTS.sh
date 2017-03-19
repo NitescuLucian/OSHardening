@@ -49,8 +49,8 @@ sudo ufw enable
 fi
 
 #Specific System Security
-echo "${yellow}Secureing shared memory, reboot will be needed.${reset}" 
-echo "tmpfs     /run/shm     tmpfs     defaults,noexec,nosuid     0     0" >> /etc/fstab
+#echo "${yellow}Secureing shared memory, reboot will be needed.${reset}" 
+#echo "tmpfs     /run/shm     tmpfs     defaults,noexec,nosuid     0     0" >> /etc/fstab
 
 #Aditional System Security Audit
 echo "${blue}Running chkrootkit. Wait! Log will be saved in ./chkrootkit_log.txt.${reset}"
