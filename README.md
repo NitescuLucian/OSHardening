@@ -19,7 +19,7 @@ Choose your OS from the following:
 * [Ubuntu 16.04 LTS](#ubuntu-1604-lts)
 * [Ubuntu 16.10](#ubuntu-1610)
 
-# Contributing
+## Contributing
 
 1. Fork it
 2. Create your feature branch (```git checkout -b my-new-feature```)
