@@ -33,7 +33,7 @@ Review cli and log filles and make your changes according to your preferences.
 In this OS I did not cover the following steps:
 * Adding a non-root user.
 * Log management
-* Closeing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
+* Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
 * Local encryption
 
 Problems might be caused by:
@@ -53,7 +53,7 @@ Review cli and log filles and make your changes according to your preferences.
 In this OS I did not cover the following steps:
 * Adding a non-root user.
 * Log management
-* Closeing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
+* Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
 * Local encryption
 
 
@@ -71,6 +71,6 @@ Review cli and log filles and make your changes according to your preferences.
 In this OS I did not cover the following steps:
 * Adding a non-root user.
 * Log management
-* Closeing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
+* Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
 * Local encryption
 
