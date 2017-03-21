@@ -33,22 +33,7 @@ Give execution permission to the fille.
 chmod +x ./kali.sh
 ```
 Execute.
-​
-35
-Contributing
-36
---
-37
-1. Fork it
-38
-2. Create your feature branch (```git checkout -b my-new-feature```)
-39
-3. Commit your changes (```git commit -am 'Add some feature'```)
-40
-4. Push to the branch (```git push origin my-new-feature```)
-41
-5. Create new Pull Request
-42
+
 ```
 ./kali.sh
 ```
