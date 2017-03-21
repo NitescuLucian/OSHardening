@@ -25,6 +25,22 @@ Give execution permission to the fille.
 chmod +x ./kali.sh
 ```
 Execute.
+​
+35
+Contributing
+36
+--
+37
+1. Fork it
+38
+2. Create your feature branch (```git checkout -b my-new-feature```)
+39
+3. Commit your changes (```git commit -am 'Add some feature'```)
+40
+4. Push to the branch (```git push origin my-new-feature```)
+41
+5. Create new Pull Request
+42
 ```
 ./kali.sh
 ```
@@ -74,3 +90,10 @@ In this OS I did not cover the following steps:
 * Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
 * Local encryption
 
+# Contributing
+
+1. Fork it
+2. Create your feature branch (```git checkout -b my-new-feature```)
+3. Commit your changes (```git commit -am 'Add some feature'```)
+4. Push to the branch (```git push origin my-new-feature```)
+5. Create new Pull Request
