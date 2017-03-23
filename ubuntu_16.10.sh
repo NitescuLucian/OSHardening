@@ -47,6 +47,12 @@ if [ "$foa" = "y" ]; then
 sudo ufw allow ssh
 sudo ufw enable
 fi
+echo "${yellow}ICMP echo ignore all ${reset}" 
+echo net.ipv4.icmp_echo_ignore_all = 1 >> /etc/sysctl.conf
+echo "${yellow}ICMP echo ignore broadcasts${reset}" 
+echo net.ipv4.icmp_echo_ignore_broadcasts = 1 >> /etc/sysctl.conf
+
+sysctl -p
 
 #Aditional System Security Audit
 echo "${blue}Running chkrootkit. Wait! Log will be saved in ./chkrootkit_log.txt.${reset}"
