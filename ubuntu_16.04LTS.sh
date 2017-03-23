@@ -47,7 +47,12 @@ if [ "$foa" = "y" ]; then
 sudo ufw allow ssh
 sudo ufw enable
 fi
+echo "${yellow}ICMP echo ignore all ${reset}" 
+echo net.ipv4.icmp_echo_ignore_all = 1 >> /etc/sysctl.conf
+echo "${yellow}ICMP echo ignore broadcasts${reset}" 
+echo net.ipv4.icmp_echo_ignore_broadcasts = 1 >> /etc/sysctl.conf
 
+sysctl -p
 #Specific System Security
 #echo "${yellow}Secureing shared memory, reboot will be needed.${reset}" 
 #echo "tmpfs     /run/shm     tmpfs     defaults,noexec,nosuid     0     0" >> /etc/fstab
