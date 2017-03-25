@@ -60,7 +60,30 @@ sysctl -p
 #Specific System Security
 # to do
 
-#Aditional System Security Audit
+#Log management
+echo "${yellow}Would you like to copy all system logs in ./SystemLogs? (y/n)${reset}"
+read foc
+if [ "$foc" = "y" ]; then
+mkdir SystemLogs
+cp /var/log/syslog ./SystemLogs/syslog
+cp /var/log/messages ./SystemLogs/messages
+cp /var/log/auth.log ./SystemLogs/auth.log
+cp /var/log/kern.log ./SystemLogs/kern.log
+cp /var/log/cron.log ./SystemLogs/cron.log
+cp /var/log/mail.log ./SystemLogs/mail.log
+cp /var/log/boot.log ./SystemLogs/boot.log
+cp /var/log/mysqld.log ./SystemLogs/mysqld.log
+cp /var/log/secure ./SystemLogs/secure
+#cp /var/log/utmp ./SystemLogs/utmp
+cp /var/log/wtmp ./SystemLogs/wtmp
+cp /var/log/yum.log ./SystemLogs/yum.log
+cp /var/log/apt/history.log ./SystemLogs/apt_history.log
+cp /var/log/dist-upgrade/apt.log ./SystemLogs/apt.log
+cp /var/log/apport.log ./SystemLogs/apport.log
+fi
+
+
+#Aditional System Security Audits
 echo "${blue}Running chkrootkit. Wait! Log will be saved in ./OSHardeningLogs/chkrootkit_log.txt.${reset}"
 sudo chkrootkit > ./OSHardeningLogs/chkrootkit_log.txt
 echo "${blue}Running lynis. Wait! Log will be saved in ./OSHardeningLogs/lynis_log.txt.${reset}"
