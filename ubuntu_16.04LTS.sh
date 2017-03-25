@@ -21,6 +21,7 @@ apt-get install lynis
 apt-get install rkhunter
 rkhunter --update
 sudo apt-get install ufw
+apt-get autoremove
 fi
 
 #Authentification security
