@@ -42,7 +42,7 @@ Review cli and log filles and make your changes according to your preferences.
 In this OS I did not cover the following steps:
 * Adding a non-root user.
 * Log management
-* Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
+* Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules)
 * Local encryption
 
 Problems might be caused by:
@@ -60,9 +60,8 @@ sudo ./ubuntu_16.04LTS.sh
 Review cli and log filles and make your changes according to your preferences.
 
 In this OS I did not cover the following steps:
-* Adding a non-root user.
 * Log management
-* Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
+* Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules)
 * Local encryption
 
 
@@ -78,8 +77,6 @@ sudo ./ubuntu_16.10.sh
 Review cli and log filles and make your changes according to your preferences.
 
 In this OS I did not cover the following steps:
-* Adding a non-root user.
 * Log management
-* Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules) 
+* Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules)
 * Local encryption
-
