@@ -61,21 +61,7 @@ echo "${yellow}Would you like to copy all system logs in ./SystemLogs? (y/n)${re
 read foc
 if [ "$foc" = "y" ]; then
 mkdir SystemLogs
-cp /var/log/syslog ./SystemLogs/syslog
-cp /var/log/messages ./SystemLogs/messages
-cp /var/log/auth.log ./SystemLogs/auth.log
-cp /var/log/kern.log ./SystemLogs/kern.log
-#cp /var/log/cron.log ./SystemLogs/cron.log
-#cp /var/log/mail.log ./SystemLogs/mail.log
-#cp /var/log/boot.log ./SystemLogs/boot.log
-#cp /var/log/mysqld.log ./SystemLogs/mysqld.log
-#cp /var/log/secure ./SystemLogs/secure
-#cp /var/log/utmp ./SystemLogs/utmp
-cp /var/log/wtmp ./SystemLogs/wtmp
-#cp /var/log/yum.log ./SystemLogs/yum.log
-cp /var/log/apt/history.log ./SystemLogs/apt_history.log
-#cp /var/log/dist-upgrade/apt.log ./SystemLogs/apt.log
-#cp /var/log/apport.log ./SystemLogs/apport.log
+cp -a /var/log/. ./SystemLogs/
 fi
 
 #Aditional System Security Audits
