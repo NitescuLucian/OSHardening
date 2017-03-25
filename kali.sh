@@ -3,10 +3,11 @@ blue=`tput setaf 2`
 red=`tput setaf 1`
 yellow=`tput setaf 3`
 reset=`tput setaf 7`
-echo "${yellow}Would you like to update your system and tools? (y/n)${reset}"
-read foo
+mkdir OSHardeningLogs
 
 #System update date & Instalations
+echo "${yellow}Would you like to update your system and tools? (y/n)${reset}"
+read foo
 if [ "$foo" = "y" ]; then
 apt-get clean
 apt-get update
@@ -24,24 +25,24 @@ fi
 #Authentification security
 echo "${blue}Please change your password for this user!${reset}"
 passwd
-echo "${blue}Checking for users with no password. Log will be saved in ./no_password_users.txt.${reset}"
+echo "${blue}Checking for users with no password. Log will be saved in ./OSHardeningLogs/no_password_users.txt.${reset}"
 cat /etc/shadow | awk -F: '($2==""){print $1}'
-cat /etc/shadow | awk -F: '($2==""){print $1}' > ./no_password_users.txt
+cat /etc/shadow | awk -F: '($2==""){print $1}' > ./OSHardeningLogs/no_password_users.txt
 
 #Network Security
 echo "${blue}Please replace your hostname (save & close)."
 leafpad /etc/hostname
 echo "${blue}Please redifine your host according to your new/previous hostname (save & close).${reset}"
 leafpad /etc/hosts
-echo "${blue}Checking for all open ports. Log will be saved in ./open_ports_log.txt.${reset}"
+echo "${blue}Checking for all open ports. Log will be saved in ./OSHardeningLogs/open_ports_log.txt.${reset}"
 netstat -tulpn
-netstat -tulpn > ./open_ports_log.txt
+netstat -tulpn > ./OSHardeningLogs/open_ports_log.txt
 echo "${yellow}Please close unwanted ports using iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or with UFW Firewall Rules.${reset}"
-echo "${blue}Checking iptables. Log will be saved in ./iptables_log.txt${reset}"
-iptables -L -n -v > ./iptables_log.txt
-echo "${blue}Checking local firewall status. Log will be saved in ./ufw_log.txt${reset}"
+echo "${blue}Checking iptables. Log will be saved in ./OSHardeningLogs/iptables_log.txt${reset}"
+iptables -L -n -v > ./OSHardeningLogs/iptables_log.txt
+echo "${blue}Checking local firewall status. Log will be saved in ./OSHardeningLogs/ufw_log.txt${reset}"
 sudo ufw status verbose
-sudo ufw status verbose > ./ufw_log.txt
+sudo ufw status verbose > ./OSHardeningLogs/ufw_log.txt
 echo "${yellow}Would you like to block all ports? (without SSH)) (y/n)${reset}"
 read foa
 if [ "$foa" = "y" ]; then
@@ -55,9 +56,9 @@ echo net.ipv4.icmp_echo_ignore_broadcasts = 1 >> /etc/sysctl.conf
 sysctl -p
 
 #Aditional System Security Audit
-echo "${blue}Running chkrootkit. Wait! Log will be saved in ./chkrootkit_log.txt.${reset}"
-sudo chkrootkit > ./chkrootkit_log.txt
-echo "${blue}Running lynis. Wait! Log will be saved in ./lynis_log.txt.${reset}"
-lynis audit system -Q > ./lynis_log.txt
+echo "${blue}Running chkrootkit. Wait! Log will be saved in ./OSHardeningLogs/chkrootkit_log.txt.${reset}"
+sudo chkrootkit > ./OSHardeningLogs/chkrootkit_log.txt
+echo "${blue}Running lynis. Wait! Log will be saved in ./OSHardeningLogs/lynis_log.txt.${reset}"
+lynis audit system -Q > ./OSHardeningLogs/lynis_log.txt
 echo "${blue}Running rkhunter. Wait!${reset}"
 rkhunter -c
