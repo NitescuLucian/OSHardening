@@ -1,4 +1,11 @@
+#Root needed
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 #!/bin/bash
+#Color code
 blue=`tput setaf 2`
 red=`tput setaf 1`
 yellow=`tput setaf 3`
