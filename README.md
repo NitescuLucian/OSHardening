@@ -40,7 +40,7 @@ Execute.
 Review cli and log filles and make your changes according to your preferences.
 
 In this OS I did not cover the following steps:
-* Adding a non-root user.
+* Adding a non-root user (for penetration testing purposes).
 * Closing open ports (iptables -A INPUT -p tcp --dport PORT_NUMBER -j DROP or UFW specific rules)
 * Local encryption
 

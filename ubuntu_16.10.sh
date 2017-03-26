@@ -57,7 +57,11 @@ echo net.ipv4.icmp_echo_ignore_broadcasts = 1 >> /etc/sysctl.conf
 sysctl -p
 
 #Specific System Security
-# to do
+echo "${yellow}Would you like to secure shared memory? Keep in mind that a reboot is required. (y/n)${reset}"
+read fod
+if [ "$fod" = "y" ]; then
+echo "tmpfs /run/shm tmpfs defaults,noexec,nosuid 0 0" | sudo tee -a /etc/fstab
+fi
 
 #Log management
 echo "${yellow}Would you like to copy all system logs in ./SystemLogs? (y/n)${reset}"
