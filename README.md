@@ -27,6 +27,8 @@ Choose your OS from the following:
 4. Push to the branch (```git push origin my-new-feature```)
 5. Create new Pull Request
 
+Donations at: https://www.paypal.me/LNitescu
+
 ## Kali Linux
 Give execution permission to the fille.
 ```
